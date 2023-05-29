@@ -17,14 +17,18 @@ CREATE DATABASE uvv WITH OWNER rebeca TEMPLATE 'template0' ENCODING 'UTF8' LC_CO
 --muda o usuário de 'postgres' para 'rebeca'
 SET ROLE rebeca;
 
+
+--mostra usuário atual conectado
 SELECT SESSION_USER, CURRENT_USER;
 
 
 --cria schema 'lojas'
 CREATE SCHEMA lojas AUTHORIZATION rebeca;
 
+--seleciona o schema corrente
 SELECT CURRENT_SCHEMA();
 
+--mostra a search_path
 SHOW SEARCH_PATH;
 
 --altera o search_path para o usuário criado
@@ -35,9 +39,10 @@ ALTER USER rebeca
 SET SEARCH_PATH TO lojas, "$user", public;
 
 
-
+--seleciona o schema corrente
 SELECT CURRENT_SCHEMA();
 
+--mostra a search_path
 SHOW SEARCH_PATH;
 
 
