@@ -69,7 +69,7 @@ CREATE TABLE clientes (
 COMMENT ON TABLE clientes IS 'Tabela dos Clientes';
 
 --cria comentários nas colunas da tabela 'clientes':
-COMMENT ON COLUMN clientes.cliente_id IS 'ID de cada cliente. Chave primária da tabela clientes.';
+COMMENT ON COLUMN clientes.cliente_id IS 'ID de cada cliente. Chave primária da tabela clientes. Coluna NOT NULL';
 COMMENT ON COLUMN clientes.email IS 'Email de cada cliente. Coluna NOT NULL';
 COMMENT ON COLUMN clientes.nome IS 'Nome de cada cliente. Coluna NOT NULL';
 COMMENT ON COLUMN clientes.telefone1 IS 'Primeiro telefone para contato de cada cliente. Coluna NOT NULL';
@@ -94,7 +94,7 @@ CREATE TABLE produtos (
 COMMENT ON TABLE produtos IS 'Tabela dos Produtos';
 
 --cria comentários nas colunas da tabela 'produtos':
-COMMENT ON COLUMN produtos.produto_id IS 'ID de cada produto. Chave primária da tabela produtos.';
+COMMENT ON COLUMN produtos.produto_id IS 'ID de cada produto. Chave primária da tabela produtos. Coluna NOT NULL';
 COMMENT ON COLUMN produtos.nome IS 'Nome de cada produto. Coluna NOT NULL';
 COMMENT ON COLUMN produtos.preco_unitario IS 'Preço unitário de cada produto. Não aceita valores negativos. Coluna NOT NULL';
 COMMENT ON COLUMN produtos.detalhes IS 'Detalhes de cada produto.';
@@ -123,7 +123,7 @@ CREATE TABLE lojas (
 COMMENT ON TABLE lojas IS 'Tabela das Lojas';
 
 --cria comentários nas colunas da tabela 'lojas':
-COMMENT ON COLUMN lojas.loja_id IS 'ID de cada loja. Chave primária da tabela lojas.';
+COMMENT ON COLUMN lojas.loja_id IS 'ID de cada loja. Chave primária da tabela lojas. Coluna NOT NULL';
 COMMENT ON COLUMN lojas.nome IS 'Nome de cada loja. Coluna NOT NULL';
 COMMENT ON COLUMN lojas.endereco_web IS 'Endereço web de cada loja. Coluna NOT NULL por meio da constraint de checagem';
 COMMENT ON COLUMN lojas.endereco_fisico IS 'Endereço físico de cada loja. Coluna NOT NULL por meio da constraint de checagem';
@@ -153,7 +153,7 @@ COMMENT ON COLUMN pedidos.data_hora IS 'Data e hora de emissão de cada pedido. 
 COMMENT ON COLUMN pedidos.cliente_id IS 'ID de cada cliente. Foreign Key da tabela clientes. Coluna NOT NULL';
 COMMENT ON COLUMN pedidos.status IS 'Status de cada pedido. Aceita somente valores: CANCELADO, COMPLETO, ABERTO, PAGO, REEMBOLSADO e
 ENVIADO. Coluna NOT NULL' ;
-COMMENT ON COLUMN pedidos.loja_id IS 'ID de cada loja. Foreign key da tabela lojas.';
+COMMENT ON COLUMN pedidos.loja_id IS 'ID de cada loja. Foreign key da tabela lojas. Coluna NOT NULL';
 
 --cria tabela 'envios' com chave primária:
 CREATE TABLE envios (
