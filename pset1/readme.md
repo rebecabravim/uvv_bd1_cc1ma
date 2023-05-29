@@ -7,8 +7,9 @@ Um PSET (Problem Set) é um conjunto de problemas e tarefas difíceis que força
 Neste primeiro PSET, criamos, inicialmente, um projeto lógico. Depois, implementamos no *PostgreSQL* o Banco de Dados - com seu usuário, schema e respectivas tabelas, além de comentários para cada objeto, a fim de melhor organização.
 
 ### O QUE É CADA ARQUIVO?
-* .pdf : projeto lógico do banco de dados;
-* .architect : script do banco de dados.
+* .architect : script gerado automaticamente pelo SQL Power Architect, a partir do diagrama do projeto do banco de dados;
+* .pdf : diagrama do projeto do banco de dados;
+* .sql : script global com toda a implementação do banco de dados.
 ### AGRADECIMENTOS
 
 A você que visita este meu diretório, seja bem-vindo! Espero que goste do meu trabalho!
